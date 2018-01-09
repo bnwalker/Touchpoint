@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7EBE9C820043F910076F187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBE9C720043F910076F187 /* AppDelegate.swift */; };
+		F7EBE9CA20043F910076F187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBE9C920043F910076F187 /* ViewController.swift */; };
+		F7EBE9CD20043F910076F187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7EBE9CB20043F910076F187 /* Main.storyboard */; };
+		F7EBE9CF20043F910076F187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7EBE9CE20043F910076F187 /* Assets.xcassets */; };
+		F7EBE9D220043F910076F187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7EBE9D020043F910076F187 /* LaunchScreen.storyboard */; };
+		F7EBE9DD20043F910076F187 /* TouchpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBE9DC20043F910076F187 /* TouchpointTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7EBE9D920043F910076F187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7EBE9BC20043F900076F187 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7EBE9C320043F910076F187;
+			remoteInfo = Touchpoint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7EBE9C420043F910076F187 /* Touchpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7EBE9C720043F910076F187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7EBE9C920043F910076F187 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7EBE9CC20043F910076F187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7EBE9CE20043F910076F187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7EBE9D120043F910076F187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7EBE9D320043F910076F187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7EBE9D820043F910076F187 /* TouchpointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchpointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7EBE9DC20043F910076F187 /* TouchpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpointTests.swift; sourceTree = "<group>"; };
+		F7EBE9DE20043F910076F187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7EBE9C120043F910076F187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7EBE9D520043F910076F187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7EBE9BB20043F900076F187 = {
+			isa = PBXGroup;
+			children = (
+				F7EBE9C620043F910076F187 /* Touchpoint */,
+				F7EBE9DB20043F910076F187 /* TouchpointTests */,
+				F7EBE9C520043F910076F187 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7EBE9C520043F910076F187 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7EBE9C420043F910076F187 /* Touchpoint.app */,
+				F7EBE9D820043F910076F187 /* TouchpointTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7EBE9C620043F910076F187 /* Touchpoint */ = {
+			isa = PBXGroup;
+			children = (
+				F7EBE9C720043F910076F187 /* AppDelegate.swift */,
+				F7EBE9C920043F910076F187 /* ViewController.swift */,
+				F7EBE9CB20043F910076F187 /* Main.storyboard */,
+				F7EBE9CE20043F910076F187 /* Assets.xcassets */,
+				F7EBE9D020043F910076F187 /* LaunchScreen.storyboard */,
+				F7EBE9D320043F910076F187 /* Info.plist */,
+			);
+			path = Touchpoint;
+			sourceTree = "<group>";
+		};
+		F7EBE9DB20043F910076F187 /* TouchpointTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7EBE9DC20043F910076F187 /* TouchpointTests.swift */,
+				F7EBE9DE20043F910076F187 /* Info.plist */,
+			);
+			path = TouchpointTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7EBE9C320043F910076F187 /* Touchpoint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7EBE9E120043F910076F187 /* Build configuration list for PBXNativeTarget "Touchpoint" */;
+			buildPhases = (
+				F7EBE9C020043F910076F187 /* Sources */,
+				F7EBE9C120043F910076F187 /* Frameworks */,
+				F7EBE9C220043F910076F187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Touchpoint;
+			productName = Touchpoint;
+			productReference = F7EBE9C420043F910076F187 /* Touchpoint.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7EBE9D720043F910076F187 /* TouchpointTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7EBE9E420043F910076F187 /* Build configuration list for PBXNativeTarget "TouchpointTests" */;
+			buildPhases = (
+				F7EBE9D420043F910076F187 /* Sources */,
+				F7EBE9D520043F910076F187 /* Frameworks */,
+				F7EBE9D620043F910076F187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7EBE9DA20043F910076F187 /* PBXTargetDependency */,
+			);
+			name = TouchpointTests;
+			productName = TouchpointTests;
+			productReference = F7EBE9D820043F910076F187 /* TouchpointTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7EBE9BC20043F900076F187 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = TouchPoint;
+				TargetAttributes = {
+					F7EBE9C320043F910076F187 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F7EBE9D720043F910076F187 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F7EBE9C320043F910076F187;
+					};
+				};
+			};
+			buildConfigurationList = F7EBE9BF20043F900076F187 /* Build configuration list for PBXProject "Touchpoint" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7EBE9BB20043F900076F187;
+			productRefGroup = F7EBE9C520043F910076F187 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7EBE9C320043F910076F187 /* Touchpoint */,
+				F7EBE9D720043F910076F187 /* TouchpointTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7EBE9C220043F910076F187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7EBE9D220043F910076F187 /* LaunchScreen.storyboard in Resources */,
+				F7EBE9CF20043F910076F187 /* Assets.xcassets in Resources */,
+				F7EBE9CD20043F910076F187 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7EBE9D620043F910076F187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7EBE9C020043F910076F187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7EBE9CA20043F910076F187 /* ViewController.swift in Sources */,
+				F7EBE9C820043F910076F187 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7EBE9D420043F910076F187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7EBE9DD20043F910076F187 /* TouchpointTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7EBE9DA20043F910076F187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7EBE9C320043F910076F187 /* Touchpoint */;
+			targetProxy = F7EBE9D920043F910076F187 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7EBE9CB20043F910076F187 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7EBE9CC20043F910076F187 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7EBE9D020043F910076F187 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7EBE9D120043F910076F187 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7EBE9DF20043F910076F187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7EBE9E020043F910076F187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7EBE9E220043F910076F187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C5384A58S7;
+				INFOPLIST_FILE = Touchpoint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bnwalker.Touchpoint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7EBE9E320043F910076F187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C5384A58S7;
+				INFOPLIST_FILE = Touchpoint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bnwalker.Touchpoint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7EBE9E520043F910076F187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C5384A58S7;
+				INFOPLIST_FILE = TouchpointTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bnwalker.TouchpointTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Touchpoint.app/Touchpoint";
+			};
+			name = Debug;
+		};
+		F7EBE9E620043F910076F187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C5384A58S7;
+				INFOPLIST_FILE = TouchpointTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bnwalker.TouchpointTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Touchpoint.app/Touchpoint";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7EBE9BF20043F900076F187 /* Build configuration list for PBXProject "Touchpoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7EBE9DF20043F910076F187 /* Debug */,
+				F7EBE9E020043F910076F187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7EBE9E120043F910076F187 /* Build configuration list for PBXNativeTarget "Touchpoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7EBE9E220043F910076F187 /* Debug */,
+				F7EBE9E320043F910076F187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7EBE9E420043F910076F187 /* Build configuration list for PBXNativeTarget "TouchpointTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7EBE9E520043F910076F187 /* Debug */,
+				F7EBE9E620043F910076F187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7EBE9BC20043F900076F187 /* Project object */;
+}
