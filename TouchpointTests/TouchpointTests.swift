@@ -33,4 +33,13 @@ class TouchpointTests: XCTestCase {
         }
     }
     
+    //MARK: Contact Class Tests
+    
+    // Confirm that the Contact initializer returns a Contact object when passed valid parameters
+    func testContactInitializationSucceeds() {
+        // Name and phone number entered
+        let namePhoneContact = Contact.init(name: "Joe", org: "", phone: "604-202-1070", address1: "1704 1st Street", address2: "Vancouver, BC V4G6H8", email: "sally", frequency: "Quarterly", lastTPDate: Date(timeIntervalSinceNow: -5 * 60), birthday: Date(timeIntervalSinceNow: -5 * 60), note: "Great Guy")
+        XCTAssertNotNil(namePhoneContact)
+    }
+    
 }

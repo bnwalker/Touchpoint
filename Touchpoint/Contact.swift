@@ -13,19 +13,19 @@ class Contact {
     //MARK: Properties
     
     var name: String
-    var org: String
-    var phone: Int
-    var address1: String
-    var address2: String
-    var email: String
+    var org: String?
+    var phone: String?
+    var address1: String?
+    var address2: String?
+    var email: String?
     var frequency: String
-    var lastTPDate: Date
-    var birthday: Date
-    var note: String
+    var lastTPDate: Date?
+    var birthday: Date?
+    var note: String?
 
     //MARK: Initialization
     
-    init?(name: String, org: String, phone: Int, address1: String, address2: String, email: String, frequency: String, lastTPDate: Date, birthday: Date, note: String) {
+    init?(name: String, org: String, phone: String, address1: String, address2: String, email: String, frequency: String, lastTPDate: Date, birthday: Date, note: String) {
         
         // Initialization should fail if name is empty
         if name.isEmpty {
