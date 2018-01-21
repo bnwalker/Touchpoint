@@ -15,17 +15,19 @@ class Contact {
     var name: String
     var org: String?
     var phone: String?
-    var address1: String?
-    var address2: String?
+    var addressStreet: String?
+    var addressCity: String?
+    var addressProvState: String?
+    var addressCode: String?
     var email: String?
     var frequency: String
-    var lastTPDate: Date?
-    var birthday: Date?
+    var lastTPDate: String?
+    var birthday: String?
     var note: String?
 
     //MARK: Initialization
     
-    init?(name: String, org: String, phone: String, address1: String, address2: String, email: String, frequency: String, lastTPDate: Date, birthday: Date, note: String) {
+    init?(name: String, org: String?, phone: String?, addressStreet: String?, addressCity: String?, addressProvState: String?, addressCode: String?, email: String?, frequency: String, lastTPDate: String?, birthday: String?, note: String?) {
         
         // Initialization should fail if name is empty
         if name.isEmpty {
@@ -41,8 +43,10 @@ class Contact {
         self.name = name
         self.org = org
         self.phone = phone
-        self.address1 = address1
-        self.address2 = address2
+        self.addressStreet = addressStreet
+        self.addressCity = addressCity
+        self.addressProvState = addressProvState
+        self.addressCode = addressCode
         self.email = email
         self.frequency = frequency
         self.lastTPDate = lastTPDate
