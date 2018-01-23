@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import os.log
 
-class Contact {
+class Contact: NSObject, NSCoding {
     
     //MARK: Properties
     
@@ -25,6 +26,28 @@ class Contact {
     var birthday: String?
     var note: String?
 
+    //MARK: Archiving Paths
+    
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("contacts")
+    
+    //MARK: Types
+    
+    struct PropertyKey {
+        static let name = "name"
+        static let org = "org"
+        static let phone = "phone"
+        static let addressStreet = "addressStreet"
+        static let addressCity = "AddressCity"
+        static let addressProvState = "AddressProvState"
+        static let addressCode = "AddressCode"
+        static let email = "email"
+        static let frequency = "frequency"
+        static let lastTPDate = "lastTPDate"
+        static let birthday = "birthday"
+        static let note = "note"
+    }
+    
     //MARK: Initialization
     
     init?(name: String, org: String?, phone: String?, addressStreet: String?, addressCity: String?, addressProvState: String?, addressCode: String?, email: String?, frequency: String, lastTPDate: String?, birthday: String?, note: String?) {
@@ -54,5 +77,43 @@ class Contact {
         self.note = note
     }
     
+    //MARK: NSCoding
+    
+    func encode(with aCoder: NSCoder){
+        aCoder.encode(name, forKey: PropertyKey.name)
+        aCoder.encode(org, forKey: PropertyKey.org)
+        aCoder.encode(phone, forKey: PropertyKey.org)
+        aCoder.encode(addressStreet, forKey: PropertyKey.addressStreet)
+        aCoder.encode(addressCity, forKey: PropertyKey.addressCity)
+        aCoder.encode(addressProvState, forKey: PropertyKey.addressProvState)
+        aCoder.encode(addressCode, forKey: PropertyKey.addressCode)
+        aCoder.encode(email, forKey: PropertyKey.email)
+        aCoder.encode(frequency, forKey: PropertyKey.frequency)
+        aCoder.encode(lastTPDate, forKey: PropertyKey.lastTPDate)
+        aCoder.encode(birthday, forKey: PropertyKey.birthday)
+        aCoder.encode(note, forKey: PropertyKey.note)
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder){
+        // The name is required.  If we cannot decode a name string, the initializer should fail.
+        guard let name = aDecoder.decodeObject(forKey: PropertyKey.name) as? String else {
+            os_log("Unable to decode the name for a Contact object", log: OSLog.default, type: .debug)
+            return nil
+        }
+        let org = aDecoder.decodeObject(forKey: PropertyKey.org) as? String
+        let phone = aDecoder.decodeObject(forKey: PropertyKey.phone) as? String
+        let addressStreet = aDecoder.decodeObject(forKey: PropertyKey.addressStreet) as? String
+        let addressCity = aDecoder.decodeObject(forKey: PropertyKey.addressCity) as? String
+        let addressProvState = aDecoder.decodeObject(forKey: PropertyKey.addressProvState) as? String
+        let addressCode = aDecoder.decodeObject(forKey: PropertyKey.addressCode) as? String
+        let email = aDecoder.decodeObject(forKey: PropertyKey.email) as? String
+        let frequency = aDecoder.decodeObject(forKey: PropertyKey.frequency) as? String
+        let lastTPDate = aDecoder.decodeObject(forKey: PropertyKey.lastTPDate) as? String
+        let birthday = aDecoder.decodeObject(forKey: PropertyKey.birthday) as? String
+        let note = aDecoder.decodeObject(forKey: PropertyKey.note) as? String
+        
+        // Must call designated initializer
+        self.init(name: name, org: org, phone: phone, addressStreet: addressStreet, addressCity: addressCity, addressProvState: addressProvState, addressCode: addressCode, email: email, frequency: frequency!, lastTPDate: lastTPDate, birthday: birthday, note: note)
+    }
 }
 

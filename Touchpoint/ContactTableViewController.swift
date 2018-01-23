@@ -21,9 +21,13 @@ class ContactTableViewController: UITableViewController {
         // Use the edit button item provied by the table view controller
         navigationItem.leftBarButtonItem = editButtonItem
         
-        // Load sample data
-        loadSampleContacts()
-
+        // Load any saved contacts, otherwise load sample data
+        if let savedContacts = loadContacts() {
+            contacts += savedContacts
+        } else {
+            // Load sample data
+            loadSampleContacts()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +77,7 @@ class ContactTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             contacts.remove(at: indexPath.row)
+            saveContacts()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -136,6 +141,9 @@ class ContactTableViewController: UITableViewController {
             contacts.append(contact)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            
+            // save the contacts
+            saveContacts()
         }
     }
     
@@ -151,6 +159,19 @@ class ContactTableViewController: UITableViewController {
         }
     
         contacts += [contact1, contact2]
+    }
+    
+    private func saveContacts() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(contacts, toFile: Contact.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Contacts successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save contacts...", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadContacts() -> [Contact]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Contact.ArchiveURL.path) as? [Contact]
     }
     
 }
