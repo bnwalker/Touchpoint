@@ -61,6 +61,7 @@
                                     <outlet property="nameLabel" destination="Qvn-u8-4jb" id="aLO-jG-gYk"/>
                                     <outlet property="orgLabel" destination="D1A-Uh-ggj" id="2Q5-eo-26J"/>
                                     <outlet property="provStateLabel" destination="jwR-S5-cRW" id="v41-01-HOb"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="Qky-Q3-M69"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -309,7 +310,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTR-7b-Mry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="125"/>
+            <point key="canvasLocation" x="881" y="481"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qky-Q3-M69"/>
+    </inferredMetricsTieBreakers>
 </document>

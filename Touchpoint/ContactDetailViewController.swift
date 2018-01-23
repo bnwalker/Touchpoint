@@ -54,6 +54,26 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         
         // Handle the text field user input through delegate callbacks.
         nameTextField.delegate = self
+        
+        // Set up views if editing and existing contact
+        if let contact = contact {
+            navigationItem.title = contact.name
+            nameTextField.text = contact.name
+            orgTextField.text = contact.org
+            phoneTextField.text = contact.phone
+            addressStreetTextField.text = contact.addressStreet
+            addressCityTextField.text = contact.addressCity
+            addressProvStateTextField.text = contact.addressProvState
+            addressCodeTextField.text = contact.addressCode
+            emailTextField.text = contact.email
+            frequencyTextField.text = contact.frequency
+            lastTPDateTextField.text = contact.lastTPDate
+            birthdayTextField.text = contact.birthday
+            noteTextField.text = contact.note
+        }
+        
+        // Enable the save button only if the text field has a valid contact name
+        updateSaveButtonState()
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,13 +90,29 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        updateSaveButtonState()
+        navigationItem.title = textField.text
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // Disable the save button when editing
+        saveButton.isEnabled = false
     }
     
     //MARK: Navigation
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        // Depending on style of presentation (modal or push), this view controller needs to be dismissed in two different ways.
+        let isPresentinginAddContactMode = presentingViewController is UINavigationController
+        if isPresentinginAddContactMode {
+            dismiss(animated: true, completion: nil)
+        }
+        else if let owningNavigationController = navigationController {
+            owningNavigationController.popViewController(animated: true)
+        }
+        else {
+            fatalError("The ContactDetailViewController is not inside a navigation controller")
+        }
     }
     
     // This method lets you configure a view controller before it's presented.
@@ -108,5 +144,12 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         contact = Contact(name: name, org: org, phone: phone, addressStreet: addressStreet, addressCity: addressCity, addressProvState: addressProvState, addressCode: addressCode, email: email, frequency: frequency, lastTPDate: lastTPDate, birthday: birthday, note: note)
     }
 
+    //MARK: Private Methods
+    
+    private func updateSaveButtonState() {
+        // Disable the save button if the text field is empty
+        let text = nameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
 }
 
