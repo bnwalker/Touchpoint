@@ -55,6 +55,8 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         // Handle the text field user input through delegate callbacks.
         nameTextField.delegate = self
         
+        createDatePicker()
+        
         // Set up views if editing and existing contact
         if let contact = contact {
             navigationItem.title = contact.name
@@ -97,6 +99,38 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         // Disable the save button when editing
         saveButton.isEnabled = false
+    }
+    
+    //MARK: Date Picker for Birthday
+    
+    let datePicker = UIDatePicker()
+    
+    func createDatePicker () {
+        // format date
+        datePicker.datePickerMode = .date
+        
+        // toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        // bar button item
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(birthdayDateDonePressed))
+        toolbar.setItems([doneButton], animated: false)
+        
+        birthdayTextField.inputAccessoryView = toolbar
+        
+        // assigning date picker to text field
+        birthdayTextField.inputView = datePicker
+    }
+    
+    @objc func birthdayDateDonePressed() {
+        // format date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        birthdayTextField.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
     }
     
     //MARK: Navigation
