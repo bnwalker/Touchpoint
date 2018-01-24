@@ -82,7 +82,7 @@ class Contact: NSObject, NSCoding {
     func encode(with aCoder: NSCoder){
         aCoder.encode(name, forKey: PropertyKey.name)
         aCoder.encode(org, forKey: PropertyKey.org)
-        aCoder.encode(phone, forKey: PropertyKey.org)
+        aCoder.encode(phone, forKey: PropertyKey.phone)
         aCoder.encode(addressStreet, forKey: PropertyKey.addressStreet)
         aCoder.encode(addressCity, forKey: PropertyKey.addressCity)
         aCoder.encode(addressProvState, forKey: PropertyKey.addressProvState)

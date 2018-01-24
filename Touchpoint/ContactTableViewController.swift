@@ -9,7 +9,13 @@
 import UIKit
 import os.log
 
-class ContactTableViewController: UITableViewController {
+enum selectedScope: Int {
+    case name = 0
+    case org = 1
+    case city = 2
+}
+
+class ContactTableViewController: UITableViewController, UISearchBarDelegate {
     
     //MARK: Properties
     
@@ -17,6 +23,7 @@ class ContactTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchBarSetup()
         
         // Use the edit button item provied by the table view controller
         navigationItem.leftBarButtonItem = editButtonItem
@@ -29,10 +36,53 @@ class ContactTableViewController: UITableViewController {
             loadSampleContacts()
         }
     }
-
+    
+    func searchBarSetup() {
+        let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:70))
+        searchBar.showsScopeBar = true
+        searchBar.scopeButtonTitles = ["Name","Organization","City"]
+        searchBar.selectedScopeButtonIndex = 0
+        searchBar.delegate = self
+        
+        self.tableView.tableHeaderView = searchBar
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: Search Bar Delegate
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            contacts = loadContacts()!
+            self.tableView.reloadData()
+        }
+        else {
+            filterTableView(ind: searchBar.selectedScopeButtonIndex, text: searchText)
+        }
+    }
+    
+    func filterTableView(ind:Int, text:String) {
+        switch ind {
+        case selectedScope.name.rawValue:
+                contacts = contacts.filter({ (mod) -> Bool in
+                    return mod.name.lowercased().contains(text.lowercased())
+            })
+            self.tableView.reloadData()
+        case selectedScope.org.rawValue:
+                contacts = contacts.filter({ (mod) -> Bool in
+                    return (mod.org?.lowercased().contains(text.lowercased()))!
+                })
+                self.tableView.reloadData()
+        case selectedScope.city.rawValue:
+                contacts = contacts.filter({ (mod) -> Bool in
+                    return (mod.addressCity?.lowercased().contains(text.lowercased()))!
+                })
+                self.tableView.reloadData()
+        default:
+            print("no type")
+        }
     }
 
     // MARK: - Table view data source
@@ -155,7 +205,7 @@ class ContactTableViewController: UITableViewController {
         }
         
         guard let contact2 = Contact(name: "Julie", org: "Waves", phone: "604-212-4444", addressStreet: "76 45th Street", addressCity: "Vancouver", addressProvState: "BC", addressCode: "F5G 6H8", email: "jim@gmail.com", frequency: "Quarterly", lastTPDate: "10Apr2017", birthday: "23Oct1978", note: "Loves Strawberries") else{
-            fatalError("Unable to instantiate contact1")
+            fatalError("Unable to instantiate contact2")
         }
     
         contacts += [contact1, contact2]

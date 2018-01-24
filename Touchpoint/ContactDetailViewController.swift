@@ -12,7 +12,6 @@ import os.log
 class ContactDetailViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var orgTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -77,7 +76,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         // Enable the save button only if the text field has a valid contact name
         updateSaveButtonState()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
