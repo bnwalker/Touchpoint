@@ -26,38 +26,99 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IET-8f-trL">
+                                            <rect key="frame" x="310" y="15" width="60" height="60"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                            </accessibility>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="4P8-nZ-Bzl"/>
+                                                <constraint firstAttribute="height" constant="60" id="Cs8-ly-AWd"/>
+                                            </constraints>
+                                        </button>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" placeholder="20" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5pE-mN-maq">
+                                            <rect key="frame" x="310" y="15" width="60" height="40"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="95p-Ru-kga"/>
+                                                <constraint firstAttribute="height" constant="40" id="HlS-uM-hoa"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvn-u8-4jb">
-                                            <rect key="frame" x="16" y="6" width="164" height="21"/>
+                                            <rect key="frame" x="50" y="5" width="188" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1A-Uh-ggj">
-                                            <rect key="frame" x="16" y="35" width="152" height="21"/>
+                                            <rect key="frame" x="50" y="34" width="188" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFS-A9-BRw">
-                                            <rect key="frame" x="16" y="64" width="89" height="21"/>
+                                            <rect key="frame" x="50" y="63" width="138" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwR-S5-cRW">
-                                            <rect key="frame" x="113" y="64" width="42" height="21"/>
+                                            <rect key="frame" x="196" y="63" width="42" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contactPhotoPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="a9Z-Rz-0NT">
+                                            <rect key="frame" x="5" y="5" width="35" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="EKF-Rm-pRC">
+                                            <rect key="frame" x="5" y="49.5" width="35" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9Ac-kv-gAi">
+                                            <rect key="frame" x="265" y="5" width="35" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xvq-Tc-UjB">
+                                            <rect key="frame" x="265" y="49.5" width="35" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DAYS" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1up-0a-amG">
+                                            <rect key="frame" x="310" y="55" width="60" height="20"/>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="9Jo-SW-QbF"/>
+                                                <constraint firstAttribute="height" constant="20" id="VBD-Cc-bb3"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1up-0a-amG" firstAttribute="top" secondItem="DtD-zv-T4g" secondAttribute="top" constant="55" id="SVl-s1-shq"/>
+                                        <constraint firstItem="IET-8f-trL" firstAttribute="top" secondItem="DtD-zv-T4g" secondAttribute="top" constant="15" id="Tdz-w9-Nm6"/>
+                                        <constraint firstAttribute="trailing" secondItem="IET-8f-trL" secondAttribute="trailing" constant="5" id="W13-FC-f1p"/>
+                                        <constraint firstAttribute="trailing" secondItem="5pE-mN-maq" secondAttribute="trailing" constant="5" id="hHj-k6-fXg"/>
+                                        <constraint firstAttribute="trailing" secondItem="1up-0a-amG" secondAttribute="trailing" constant="5" id="lgW-c9-ZrW"/>
+                                        <constraint firstItem="5pE-mN-maq" firstAttribute="top" secondItem="DtD-zv-T4g" secondAttribute="top" constant="15" id="rFe-7l-bOh"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cityLabel" destination="lFS-A9-BRw" id="SB3-Co-YkW"/>
+                                    <outlet property="contactPhoto" destination="a9Z-Rz-0NT" id="KM6-28-Xca"/>
+                                    <outlet property="lastTPBkgnd" destination="IET-8f-trL" id="XPc-PL-XSR"/>
+                                    <outlet property="lastTPNumber" destination="5pE-mN-maq" id="3ou-W4-3yY"/>
+                                    <outlet property="lastTPWord" destination="1up-0a-amG" id="dHt-Rb-bOY"/>
                                     <outlet property="nameLabel" destination="Qvn-u8-4jb" id="aLO-jG-gYk"/>
                                     <outlet property="orgLabel" destination="D1A-Uh-ggj" id="2Q5-eo-26J"/>
                                     <outlet property="provStateLabel" destination="jwR-S5-cRW" id="v41-01-HOb"/>
@@ -313,6 +374,12 @@
             <point key="canvasLocation" x="881" y="481"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="contactPhotoPlaceholder" width="17" height="17"/>
+        <image name="emailIcon" width="17" height="17"/>
+        <image name="mapIcon" width="17" height="17"/>
+        <image name="phoneIcon" width="17" height="17"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Qky-Q3-M69"/>
     </inferredMetricsTieBreakers>

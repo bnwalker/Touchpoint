@@ -112,6 +112,8 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
         cell.orgLabel.text = contact.org
         cell.cityLabel.text = contact.addressCity
         cell.provStateLabel.text = contact.addressProvState
+        cell.lastTPBkgnd.backgroundColor = UIColor.red
+        cell.lastTPBkgnd.layer.cornerRadius = 10
 
         return cell
     }
