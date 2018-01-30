@@ -69,7 +69,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         
         // Set up views if editing and existing contact
         if let contact = contact {
-            navigationItem.title = contact.name
+            navigationItem.title = "Contact Details"
             nameTextField.text = contact.name
             orgTextField.text = contact.org
             phoneTextField.text = contact.phone
