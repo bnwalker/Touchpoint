@@ -67,7 +67,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         
         createDatePicker()
         
-        // Set up views if editing and existing contact
+        // Set up views if editing an existing contact
         if let contact = contact {
             navigationItem.title = "Contact Details"
             nameTextField.text = contact.name
@@ -103,7 +103,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         updateSaveButtonState()
-        navigationItem.title = textField.text
+        navigationItem.title = "New Contact"
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
