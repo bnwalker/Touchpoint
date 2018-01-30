@@ -53,6 +53,17 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         
         // Handle the text field user input through delegate callbacks.
         nameTextField.delegate = self
+        orgTextField.delegate = self
+        phoneTextField.delegate = self
+        addressStreetTextField.delegate = self
+        addressCityTextField.delegate = self
+        addressProvStateTextField.delegate = self
+        addressCodeTextField.delegate = self
+        emailTextField.delegate = self
+        frequencyTextField.delegate = self
+        lastTPDateTextField.delegate = self
+        birthdayTextField.delegate = self
+        noteTextField.delegate = self
         
         createDatePicker()
         
