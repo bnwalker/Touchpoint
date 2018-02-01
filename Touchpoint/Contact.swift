@@ -16,6 +16,7 @@ class Contact: NSObject, NSCoding {
     var name: String
     var org: String?
     var phone: String?
+    var textMsg: String?
     var addressStreet: String?
     var addressCity: String?
     var addressProvState: String?
@@ -37,6 +38,7 @@ class Contact: NSObject, NSCoding {
         static let name = "name"
         static let org = "org"
         static let phone = "phone"
+        static let textMsg = "textMsg"
         static let addressStreet = "addressStreet"
         static let addressCity = "AddressCity"
         static let addressProvState = "AddressProvState"
@@ -50,7 +52,7 @@ class Contact: NSObject, NSCoding {
     
     //MARK: Initialization
     
-    init?(name: String, org: String?, phone: String?, addressStreet: String?, addressCity: String?, addressProvState: String?, addressCode: String?, email: String?, frequency: String, lastTPDate: String?, birthday: String?, note: String?) {
+    init?(name: String, org: String?, phone: String?, textMsg: String?, addressStreet: String?, addressCity: String?, addressProvState: String?, addressCode: String?, email: String?, frequency: String, lastTPDate: String?, birthday: String?, note: String?) {
         
         // Initialization should fail if name is empty
         if name.isEmpty {
@@ -66,6 +68,7 @@ class Contact: NSObject, NSCoding {
         self.name = name
         self.org = org
         self.phone = phone
+        self.textMsg = textMsg
         self.addressStreet = addressStreet
         self.addressCity = addressCity
         self.addressProvState = addressProvState
@@ -83,6 +86,7 @@ class Contact: NSObject, NSCoding {
         aCoder.encode(name, forKey: PropertyKey.name)
         aCoder.encode(org, forKey: PropertyKey.org)
         aCoder.encode(phone, forKey: PropertyKey.phone)
+        aCoder.encode(textMsg, forKey: PropertyKey.textMsg)
         aCoder.encode(addressStreet, forKey: PropertyKey.addressStreet)
         aCoder.encode(addressCity, forKey: PropertyKey.addressCity)
         aCoder.encode(addressProvState, forKey: PropertyKey.addressProvState)
@@ -102,6 +106,7 @@ class Contact: NSObject, NSCoding {
         }
         let org = aDecoder.decodeObject(forKey: PropertyKey.org) as? String
         let phone = aDecoder.decodeObject(forKey: PropertyKey.phone) as? String
+        let textMsg = aDecoder.decodeObject(forKey: PropertyKey.textMsg) as? String
         let addressStreet = aDecoder.decodeObject(forKey: PropertyKey.addressStreet) as? String
         let addressCity = aDecoder.decodeObject(forKey: PropertyKey.addressCity) as? String
         let addressProvState = aDecoder.decodeObject(forKey: PropertyKey.addressProvState) as? String
@@ -113,7 +118,7 @@ class Contact: NSObject, NSCoding {
         let note = aDecoder.decodeObject(forKey: PropertyKey.note) as? String
         
         // Must call designated initializer
-        self.init(name: name, org: org, phone: phone, addressStreet: addressStreet, addressCity: addressCity, addressProvState: addressProvState, addressCode: addressCode, email: email, frequency: frequency!, lastTPDate: lastTPDate, birthday: birthday, note: note)
+        self.init(name: name, org: org, phone: phone, textMsg: textMsg, addressStreet: addressStreet, addressCity: addressCity, addressProvState: addressProvState, addressCode: addressCode, email: email, frequency: frequency!, lastTPDate: lastTPDate, birthday: birthday, note: note)
     }
 }
 

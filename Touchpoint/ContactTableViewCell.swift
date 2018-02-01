@@ -16,7 +16,6 @@ class ContactTableViewCell: UITableViewCell {
     @IBOutlet weak var orgLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var provStateLabel: UILabel!
-    @IBOutlet weak var contactPhoto: UIImageView!
     @IBOutlet weak var lastTPNumber: UITextField!
     @IBOutlet weak var lastTPWord: UITextField!
     @IBOutlet weak var lastTPBkgnd: UIButton!
@@ -31,5 +30,5 @@ class ContactTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

@@ -35,6 +35,7 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
             // Load sample data
             loadSampleContacts()
         }
+        
     }
     
     func searchBarSetup() {
@@ -114,7 +115,7 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
         cell.provStateLabel.text = contact.addressProvState
         cell.lastTPBkgnd.backgroundColor = UIColor.red
         cell.lastTPBkgnd.layer.cornerRadius = 10
-
+        
         return cell
     }
 
@@ -202,11 +203,11 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
     //MARK: Private Methods
     
     private func loadSampleContacts() {
-        guard let contact1 = Contact(name: "Jim", org: "Waves", phone: "604-202-1070", addressStreet: "23 45th Street", addressCity: "Vancouver", addressProvState: "BC", addressCode: "F5G 6H8", email: "jim@gmail.com", frequency: "Quarterly", lastTPDate: "10Apr2017", birthday: "23Oct1978", note: "Loves Strawberries") else{
+        guard let contact1 = Contact(name: "Jim", org: "Waves", phone: "604-202-1070", textMsg: "604-287-9098", addressStreet: "23 45th Street", addressCity: "Vancouver", addressProvState: "BC", addressCode: "F5G 6H8", email: "jim@gmail.com", frequency: "Quarterly", lastTPDate: "10Apr2017", birthday: "23Oct1978", note: "Loves Strawberries") else{
             fatalError("Unable to instantiate contact1")
         }
         
-        guard let contact2 = Contact(name: "Julie", org: "Waves", phone: "604-212-4444", addressStreet: "76 45th Street", addressCity: "Vancouver", addressProvState: "BC", addressCode: "F5G 6H8", email: "jim@gmail.com", frequency: "Quarterly", lastTPDate: "10Apr2017", birthday: "23Oct1978", note: "Loves Strawberries") else{
+        guard let contact2 = Contact(name: "Julie", org: "Waves", phone: "604-212-4444", textMsg: "489-098-8765", addressStreet: "76 45th Street", addressCity: "Vancouver", addressProvState: "BC", addressCode: "F5G 6H8", email: "jim@gmail.com", frequency: "Quarterly", lastTPDate: "10Apr2017", birthday: "23Oct1978", note: "Loves Strawberries") else{
             fatalError("Unable to instantiate contact2")
         }
     

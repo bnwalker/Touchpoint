@@ -15,6 +15,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var orgTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var textMsgTextField: UITextField!
     @IBOutlet weak var addressStreetTextField: UITextField!
     @IBOutlet weak var addressCityTextField: UITextField!
     @IBOutlet weak var addressProvStateTextField: UITextField!
@@ -41,6 +42,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBOutlet weak var lastTPBkgnd: UIButton!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     /*
         This value is either passed by 'ContactTableViewController' in 'prepare(for:sender:)'
@@ -55,6 +57,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         nameTextField.delegate = self
         orgTextField.delegate = self
         phoneTextField.delegate = self
+        textMsgTextField.delegate = self
         addressStreetTextField.delegate = self
         addressCityTextField.delegate = self
         addressProvStateTextField.delegate = self
@@ -73,6 +76,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
             nameTextField.text = contact.name
             orgTextField.text = contact.org
             phoneTextField.text = contact.phone
+            textMsgTextField.text = contact.textMsg
             addressStreetTextField.text = contact.addressStreet
             addressCityTextField.text = contact.addressCity
             addressProvStateTextField.text = contact.addressProvState
@@ -83,6 +87,9 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
             birthdayTextField.text = contact.birthday
             noteTextField.text = contact.note
         }
+        
+        lastTPBkgnd.backgroundColor = UIColor.red
+        lastTPBkgnd.layer.cornerRadius = 10
         
         // Enable the save button only if the text field has a valid contact name
         updateSaveButtonState()
@@ -173,6 +180,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         let name = nameTextField.text ?? ""
         let org = orgTextField.text ?? ""
         let phone = phoneTextField.text ?? ""
+        let textMsg = textMsgTextField.text ?? ""
         let addressStreet = addressStreetTextField.text ?? ""
         let addressCity = addressCityTextField.text ?? ""
         let addressProvState = addressProvStateTextField.text ?? ""
@@ -185,7 +193,7 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
       
         
         // Set the contact to be passed to ContactTableViewController after the unwind segue.
-        contact = Contact(name: name, org: org, phone: phone, addressStreet: addressStreet, addressCity: addressCity, addressProvState: addressProvState, addressCode: addressCode, email: email, frequency: frequency, lastTPDate: lastTPDate, birthday: birthday, note: note)
+        contact = Contact(name: name, org: org, phone: phone, textMsg: textMsg, addressStreet: addressStreet, addressCity: addressCity, addressProvState: addressProvState, addressCode: addressCode, email: email, frequency: frequency, lastTPDate: lastTPDate, birthday: birthday, note: note)
     }
 
     //MARK: Private Methods
