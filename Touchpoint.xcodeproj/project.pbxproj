@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE65ABDC200B914000738ED4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65ABDB200B914000738ED4 /* Contact.swift */; };
 		CEC2CBA4200C0922009B0E3E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2CBA3200C0922009B0E3E /* ContactTableViewCell.swift */; };
+		F76196D520268BF0006F9231 /* TouchpointDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76196D420268BF0006F9231 /* TouchpointDetailViewController.swift */; };
 		F7D27B07200DB1B500789525 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D27B06200DB1B500789525 /* ContactTableViewController.swift */; };
 		F7EBE9C820043F910076F187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBE9C720043F910076F187 /* AppDelegate.swift */; };
 		F7EBE9CA20043F910076F187 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBE9C920043F910076F187 /* ContactDetailViewController.swift */; };
@@ -16,7 +17,6 @@
 		F7EBE9CF20043F910076F187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7EBE9CE20043F910076F187 /* Assets.xcassets */; };
 		F7EBE9D220043F910076F187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7EBE9D020043F910076F187 /* LaunchScreen.storyboard */; };
 		F7EBE9DD20043F910076F187 /* TouchpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBE9DC20043F910076F187 /* TouchpointTests.swift */; };
-		F7F89B28202298EF0047845C /* TouchpointDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F89B27202298EF0047845C /* TouchpointDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		CE65ABDB200B914000738ED4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CEC2CBA3200C0922009B0E3E /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		F76196D420268BF0006F9231 /* TouchpointDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpointDetailViewController.swift; sourceTree = "<group>"; };
 		F7D27B06200DB1B500789525 /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		F7EBE9C420043F910076F187 /* Touchpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EBE9C720043F910076F187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		F7EBE9D820043F910076F187 /* TouchpointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchpointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7EBE9DC20043F910076F187 /* TouchpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpointTests.swift; sourceTree = "<group>"; };
 		F7EBE9DE20043F910076F187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7F89B27202298EF0047845C /* TouchpointDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpointDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +87,10 @@
 			children = (
 				F7EBE9C720043F910076F187 /* AppDelegate.swift */,
 				F7EBE9C920043F910076F187 /* ContactDetailViewController.swift */,
+				F76196D420268BF0006F9231 /* TouchpointDetailViewController.swift */,
 				F7D27B06200DB1B500789525 /* ContactTableViewController.swift */,
-				F7F89B27202298EF0047845C /* TouchpointDetailViewController.swift */,
-				CE65ABDB200B914000738ED4 /* Contact.swift */,
 				CEC2CBA3200C0922009B0E3E /* ContactTableViewCell.swift */,
+				CE65ABDB200B914000738ED4 /* Contact.swift */,
 				F7EBE9CB20043F910076F187 /* Main.storyboard */,
 				F7EBE9CE20043F910076F187 /* Assets.xcassets */,
 				F7EBE9D020043F910076F187 /* LaunchScreen.storyboard */,
@@ -211,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7F89B28202298EF0047845C /* TouchpointDetailViewController.swift in Sources */,
+				F76196D520268BF0006F9231 /* TouchpointDetailViewController.swift in Sources */,
 				CEC2CBA4200C0922009B0E3E /* ContactTableViewCell.swift in Sources */,
 				CE65ABDC200B914000738ED4 /* Contact.swift in Sources */,
 				F7D27B07200DB1B500789525 /* ContactTableViewController.swift in Sources */,

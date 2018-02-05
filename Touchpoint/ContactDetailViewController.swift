@@ -49,6 +49,10 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         or constructed as part of adding a new meal
     */
     var contact: Contact?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -195,6 +199,10 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         // Set the contact to be passed to ContactTableViewController after the unwind segue.
         contact = Contact(name: name, org: org, phone: phone, textMsg: textMsg, addressStreet: addressStreet, addressCity: addressCity, addressProvState: addressProvState, addressCode: addressCode, email: email, frequency: frequency, lastTPDate: lastTPDate, birthday: birthday, note: note)
     }
+    
+    //MARK: Actions
+
+    
 
     //MARK: Private Methods
     
