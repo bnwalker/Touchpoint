@@ -20,7 +20,7 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
     //MARK: Properties
     
     var contacts = [Contact]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchBarSetup()
@@ -224,6 +224,7 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
     
     private func loadContacts() -> [Contact]? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Contact.ArchiveURL.path) as? [Contact]
+
     }
     
 }

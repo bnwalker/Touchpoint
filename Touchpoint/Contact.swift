@@ -60,7 +60,7 @@ class Contact: NSObject, NSCoding {
         }
         
         // Initiazation should fail if frequency is any value other than the established options
-        if !(frequency == "Monthy" || frequency == "Quarterly" || frequency == "Semiannually") {
+        if !(frequency == "Monthy" || frequency == "Quarterly" || frequency == "Semiannually" || frequency == "Annually") {
             return nil
         }
         

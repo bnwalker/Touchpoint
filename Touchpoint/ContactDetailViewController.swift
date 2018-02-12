@@ -9,6 +9,8 @@
 import UIKit
 import os.log
 
+
+
 class ContactDetailViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
@@ -32,6 +34,9 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         else if frequencyTextField.text == "Semiannually" {
             frequencyTextField.text = "Quarterly"
         }
+        else if frequencyTextField.text == "Annually" {
+            frequencyTextField.text = "Semiannually"
+        }
     }
     @IBAction func decreaseFrequencyButton(_ sender: UIButton) {
         if frequencyTextField.text == "Quarterly" {
@@ -39,6 +44,9 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
         }
         else if frequencyTextField.text == "Monthly" {
             frequencyTextField.text = "Quarterly"
+        }
+        else if frequencyTextField.text == "Semiannally" {
+            frequencyTextField.text = "Annually"
         }
     }
     
@@ -158,11 +166,14 @@ class ContactDetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         // Depending on style of presentation (modal or push), this view controller needs to be dismissed in two different ways.
-        let isPresentinginAddContactMode = presentingViewController is UINavigationController
+        print("The cancel button was pressed")
+        let isPresentinginAddContactMode = presentingViewController != nil
         if isPresentinginAddContactMode {
+            print("The cancel button was pressed in add contact mode")
             dismiss(animated: true, completion: nil)
         }
         else if let owningNavigationController = navigationController {
+            print("The cancel button was pressed in edit contact mode")
             owningNavigationController.popViewController(animated: true)
         }
         else {
