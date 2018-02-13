@@ -10,6 +10,8 @@
 		CE65ABDC200B914000738ED4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65ABDB200B914000738ED4 /* Contact.swift */; };
 		CEC2CBA4200C0922009B0E3E /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2CBA3200C0922009B0E3E /* ContactTableViewCell.swift */; };
 		F76196D520268BF0006F9231 /* TouchpointDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76196D420268BF0006F9231 /* TouchpointDetailViewController.swift */; };
+		F78E1AAE2032833F004F7CCD /* TouchpointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E1AAD2032833F004F7CCD /* TouchpointTableViewCell.swift */; };
+		F78E1AB02032936F004F7CCD /* TouchpointTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E1AAF2032936F004F7CCD /* TouchpointTableViewController.swift */; };
 		F7D27B07200DB1B500789525 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D27B06200DB1B500789525 /* ContactTableViewController.swift */; };
 		F7DC9C6A202A838C00E5F4C7 /* Touchpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DC9C69202A838C00E5F4C7 /* Touchpoint.swift */; };
 		F7EBE9C820043F910076F187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBE9C720043F910076F187 /* AppDelegate.swift */; };
@@ -34,6 +36,8 @@
 		CE65ABDB200B914000738ED4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CEC2CBA3200C0922009B0E3E /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		F76196D420268BF0006F9231 /* TouchpointDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpointDetailViewController.swift; sourceTree = "<group>"; };
+		F78E1AAD2032833F004F7CCD /* TouchpointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpointTableViewCell.swift; sourceTree = "<group>"; };
+		F78E1AAF2032936F004F7CCD /* TouchpointTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchpointTableViewController.swift; sourceTree = "<group>"; };
 		F7D27B06200DB1B500789525 /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 		F7DC9C69202A838C00E5F4C7 /* Touchpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touchpoint.swift; sourceTree = "<group>"; };
 		F7EBE9C420043F910076F187 /* Touchpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,8 @@
 				CEC2CBA3200C0922009B0E3E /* ContactTableViewCell.swift */,
 				F7EBE9C920043F910076F187 /* ContactDetailViewController.swift */,
 				F7DC9C69202A838C00E5F4C7 /* Touchpoint.swift */,
+				F78E1AAF2032936F004F7CCD /* TouchpointTableViewController.swift */,
+				F78E1AAD2032833F004F7CCD /* TouchpointTableViewCell.swift */,
 				F76196D420268BF0006F9231 /* TouchpointDetailViewController.swift */,
 				F7EBE9CB20043F910076F187 /* Main.storyboard */,
 				F7EBE9CE20043F910076F187 /* Assets.xcassets */,
@@ -214,12 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78E1AAE2032833F004F7CCD /* TouchpointTableViewCell.swift in Sources */,
 				F7DC9C6A202A838C00E5F4C7 /* Touchpoint.swift in Sources */,
 				F76196D520268BF0006F9231 /* TouchpointDetailViewController.swift in Sources */,
 				CEC2CBA4200C0922009B0E3E /* ContactTableViewCell.swift in Sources */,
 				CE65ABDC200B914000738ED4 /* Contact.swift in Sources */,
 				F7D27B07200DB1B500789525 /* ContactTableViewController.swift in Sources */,
 				F7EBE9CA20043F910076F187 /* ContactDetailViewController.swift in Sources */,
+				F78E1AB02032936F004F7CCD /* TouchpointTableViewController.swift in Sources */,
 				F7EBE9C820043F910076F187 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,11 +9,6 @@
 import UIKit
 import os.log
 
-enum selectedScope: Int {
-    case name = 0
-    case org = 1
-    case city = 2
-}
 
 class ContactTableViewController: UITableViewController, UISearchBarDelegate {
     
@@ -38,6 +33,12 @@ class ContactTableViewController: UITableViewController, UISearchBarDelegate {
         
     }
     
+    enum selectedScope: Int {
+        case name = 0
+        case org = 1
+        case city = 2
+    }
+
     func searchBarSetup() {
         let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:70))
         searchBar.showsScopeBar = true

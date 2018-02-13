@@ -19,11 +19,19 @@ class TouchpointDetailViewController: UIViewController, UITextFieldDelegate, UIT
     @IBOutlet weak var org2TextField: UITextField!
     @IBOutlet weak var contact3TextField: UITextField!
     @IBOutlet weak var org3TextField: UITextField!
-    @IBOutlet weak var contact4TextField: UITextField!
-    @IBOutlet weak var org4TextField: UITextField!
     @IBOutlet weak var notesTextField: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    var activeContactField = String()
+    @IBAction func contact1Editing(_ sender: Any) {
+        activeContactField="contact1"
+    }
+    @IBAction func contact2Editing(_ sender: Any) {
+        activeContactField="contact2"
+    }
+    @IBAction func contact3Editing(_ sender: Any) {
+        activeContactField="contact3"
+    }
     
     var touchpoint: Touchpoint?
     var contacts = [Contact] ()
@@ -42,7 +50,6 @@ class TouchpointDetailViewController: UIViewController, UITextFieldDelegate, UIT
         contact1TextField.delegate = self
         contact2TextField.delegate = self
         contact3TextField.delegate = self
-        contact4TextField.delegate = self
         notesTextField.delegate = self
         
         createDatePicker()
@@ -58,8 +65,6 @@ class TouchpointDetailViewController: UIViewController, UITextFieldDelegate, UIT
             org2TextField.text = touchpoint.org2
             contact3TextField.text = touchpoint.name3
             org3TextField.text = touchpoint.org3
-            contact4TextField.text = touchpoint.name4
-            org4TextField.text = touchpoint.org4
             notesTextField.text = touchpoint.notes
         }
         
@@ -71,6 +76,8 @@ class TouchpointDetailViewController: UIViewController, UITextFieldDelegate, UIT
         if let savedContacts = loadContacts() {
             contacts += savedContacts
         }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -159,16 +166,27 @@ class TouchpointDetailViewController: UIViewController, UITextFieldDelegate, UIT
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let contactNames = contacts.map { $0.name }
         let orgNames = contacts.map { $0.org }
-        contact2TextField.text = contactNames[row]
-        org2TextField.text = orgNames[row]
-
+        if (contact1TextField.text?.isEmpty)! {
+            contact1TextField.text = contactNames[row]
+            org1TextField.text = orgNames[row]
+        } else if (contact2TextField.text?.isEmpty)! && activeContactField != "contact1" {
+            contact2TextField.text = contactNames[row]
+            org2TextField.text = orgNames[row]
+        } else if activeContactField == "contact1" {
+            contact1TextField.text = contactNames[row]
+            org1TextField.text = orgNames[row]
+        } else if activeContactField == "contact2" {
+            contact2TextField.text = contactNames[row]
+            org2TextField.text = orgNames[row]
+        } else if activeContactField == "contact3" {
+            contact3TextField.text = contactNames[row]
+            org3TextField.text = orgNames[row]
+        }
     }
     
     func createContactPicker () {
-        let contact1Picker = UIPickerView()
-        contact1Picker.delegate = self
-        let contact2Picker = UIPickerView()
-        contact2Picker.delegate = self
+        let contactPicker = UIPickerView()
+        contactPicker.delegate = self
         
         // toolbar
         let toolbar = UIToolbar()
@@ -180,10 +198,12 @@ class TouchpointDetailViewController: UIViewController, UITextFieldDelegate, UIT
         
         contact1TextField.inputAccessoryView = toolbar
         contact2TextField.inputAccessoryView = toolbar
+        contact3TextField.inputAccessoryView = toolbar
         
         // assigning contact picker to text field
-        contact1TextField.inputView = contact1Picker
-        contact2TextField.inputView = contact2Picker
+        contact1TextField.inputView = contactPicker
+        contact2TextField.inputView = contactPicker
+        contact3TextField.inputView = contactPicker
 
     }
     
@@ -197,14 +217,11 @@ class TouchpointDetailViewController: UIViewController, UITextFieldDelegate, UIT
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         // Depending on style of presentation (modal or push), this view controller needs to be dismissed in two different ways.
-        print("The cancel button was pressed")
         let isPresentinginAddTouchpointMode = presentingViewController != nil
         if isPresentinginAddTouchpointMode {
-            print("The cancel button was pressed in add touchpoint mode")
             dismiss(animated: true, completion: nil)
         }
         else if let owningNavigationController = navigationController {
-            print("The cancel button was pressed in edit touchpoint mode")
             owningNavigationController.popViewController(animated: true)
         }
         else {
@@ -229,13 +246,12 @@ class TouchpointDetailViewController: UIViewController, UITextFieldDelegate, UIT
         let org2 = org2TextField.text ?? ""
         let name3 = contact3TextField.text ?? ""
         let org3 = org3TextField.text ?? ""
-        let name4 = contact4TextField.text ?? ""
-        let org4 = org4TextField.text ?? ""
         let notes = notesTextField.text ?? ""
         let touchpointDate = TPDateTextField.text ?? ""
+
         
         // Set the contact to be passed to ContactTableViewController after the unwind segue.
-        touchpoint = Touchpoint(name1: name1, org1: org1, name2: name2, org2: org2, name3: name3, org3: org3, name4: name4, org4: org4, touchpointDate: touchpointDate, notes: notes, goals: "", photo: nil)
+        touchpoint = Touchpoint(name1: name1, org1: org1, name2: name2, org2: org2, name3: name3, org3: org3, touchpointDate: touchpointDate, notes: notes, goals: "", photo: nil)
     }
     
     //MARK: Actions

@@ -19,8 +19,6 @@ class Touchpoint: NSObject, NSCoding {
     var org2: String?
     var name3: String?
     var org3: String?
-    var name4: String?
-    var org4: String?
     var touchpointDate: String?
     var notes: String?
     var goals: String?
@@ -40,8 +38,6 @@ class Touchpoint: NSObject, NSCoding {
         static let org2 = "org2"
         static let name3 = "name3"
         static let org3 = "org3"
-        static let name4 = "name4"
-        static let org4 = "org4"
         static let touchpointDate = "touchpointDate"
         static let notes = "notes"
         static let goals = "goals"
@@ -50,7 +46,7 @@ class Touchpoint: NSObject, NSCoding {
     
     //MARK: Initialization
     
-    init?(name1: String, org1: String?, name2: String?, org2: String?, name3: String?, org3: String?, name4: String?, org4: String?, touchpointDate: String?, notes: String?, goals: String?, photo: UIImage?) {
+    init?(name1: String, org1: String?, name2: String?, org2: String?, name3: String?, org3: String?, touchpointDate: String?, notes: String?, goals: String?, photo: UIImage?) {
         
         // Initialization should fail if name is empty
         if name1.isEmpty {
@@ -64,8 +60,6 @@ class Touchpoint: NSObject, NSCoding {
         self.org2 = org2
         self.name3 = name3
         self.org3 = org3
-        self.name4 = name4
-        self.org4 = org4
         self.touchpointDate = touchpointDate
         self.notes = notes
         self.goals = goals
@@ -81,8 +75,6 @@ class Touchpoint: NSObject, NSCoding {
         aCoder.encode(org2, forKey: PropertyKey.org2)
         aCoder.encode(name3, forKey: PropertyKey.name3)
         aCoder.encode(org3, forKey: PropertyKey.org3)
-        aCoder.encode(name4, forKey: PropertyKey.name4)
-        aCoder.encode(org4, forKey: PropertyKey.org4)
         aCoder.encode(touchpointDate, forKey: PropertyKey.touchpointDate)
         aCoder.encode(notes, forKey: PropertyKey.notes)
         aCoder.encode(goals, forKey: PropertyKey.goals)
@@ -100,15 +92,13 @@ class Touchpoint: NSObject, NSCoding {
         let org2 = aDecoder.decodeObject(forKey: PropertyKey.org2) as? String
         let name3 = aDecoder.decodeObject(forKey: PropertyKey.name3) as? String
         let org3 = aDecoder.decodeObject(forKey: PropertyKey.org3) as? String
-        let name4 = aDecoder.decodeObject(forKey: PropertyKey.name4) as? String
-        let org4 = aDecoder.decodeObject(forKey: PropertyKey.org4) as? String
         let touchpointDate = aDecoder.decodeObject(forKey: PropertyKey.touchpointDate) as? String
         let notes = aDecoder.decodeObject(forKey: PropertyKey.notes) as? String
         let goals = aDecoder.decodeObject(forKey: PropertyKey.goals) as? String
         let photo = aDecoder.decodeObject(forKey: PropertyKey.photo) as? UIImage
         
         // Must call designated initializer
-        self.init(name1: name1, org1: org1, name2: name2, org2: org2, name3: name3, org3: org3, name4: name4, org4: org4, touchpointDate: touchpointDate, notes: notes, goals: goals, photo: photo)
+        self.init(name1: name1, org1: org1, name2: name2, org2: org2, name3: name3, org3: org3, touchpointDate: touchpointDate, notes: notes, goals: goals, photo: photo)
     }
 }
 
